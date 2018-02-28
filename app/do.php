@@ -1,24 +1,5 @@
 <?php
-require_once 'src/Autorizacion.php';
-require_once 'src/CustomSoap.php';
-require_once 'src/Producto.php';
-
-require_once 'src/ConsultaRespuestaPedido/ConsultaRespuestaPedido.php';
-require_once 'src/ConsultaRespuestaPedido/DatosTransaccion.php';
-require_once 'src/ConsultaRespuestaPedido/ConsultaRespuestaPedidoWS.php';
-
-require_once 'src/SolicitudPedido/DatosTransaccion.php';
-require_once 'src/SolicitudPedido/Items.php';
-require_once 'src/SolicitudPedido/Item.php';
-require_once 'src/SolicitudPedido/SolicitudPedidoWS.php';
-require_once 'src/SolicitudPedido/SolicitudPedido.php';
-
-require_once 'src/ConsultaDisponibilidadProducto/DatosTransaccion.php';
-require_once 'src/ConsultaDisponibilidadProducto/Items.php';
-require_once 'src/ConsultaDisponibilidadProducto/Item.php';
-require_once 'src/ConsultaDisponibilidadProducto/ConsultaDisponibilidadProducto.php';
-require_once 'src/ConsultaDisponibilidadProducto/ConsultaDisponibilidadProductoWS.php';
-
+require_once 'bootstrap.php';/*
 $auth = new \App\Autorizacion();
 $auth->setClave('Clave')->setUsuario('Usuario')->setCodigoClienteDomicilio('Codigo');
 

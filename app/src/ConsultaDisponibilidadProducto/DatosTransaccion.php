@@ -17,7 +17,7 @@ class DatosTransaccion
     private $Deposito;
 
     /**
-     * @var Items
+     * @var Items[]
      */
     private $Items;
 
@@ -40,9 +40,9 @@ class DatosTransaccion
     }
 
     /**
-     * @return Items
+     * @return Items[]
      */
-    public function getItems(): Items
+    public function getItems()
     {
         return $this->Items;
     }
@@ -53,7 +53,7 @@ class DatosTransaccion
      */
     public function setItems(Items $Items): DatosTransaccion
     {
-        $this->Items = $Items;
+        $this->Items[] = $Items;
         return $this;
     }
 

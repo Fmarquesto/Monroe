@@ -17,8 +17,10 @@ class CustomSoap extends \SoapClient
 
     public function __doRequest($request, $location, $action, $version, $one_way = null)
     {
+        //TODO Mejorar este replace, Analizar uso de SoapVar
         $request = str_replace($this->arraySearch, $this->arrayReplace, $request);
-        //var_dump($request);die;
+        $request = str_replace('<SOAP-ENC:Struct>','',$request);
+        $request = str_replace('</SOAP-ENC:Struct>','',$request);
         return parent::__doRequest($request, $location, $action, $version);
     }
 }

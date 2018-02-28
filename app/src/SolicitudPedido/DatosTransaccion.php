@@ -27,7 +27,7 @@ class DatosTransaccion
     private $NroPedidoCliente;
 
     /**
-     * @var Items $Items
+     * @var Items[] $Items
      */
     private $Items;
 
@@ -86,9 +86,9 @@ class DatosTransaccion
     }
 
     /**
-     * @return Items
+     * @return Items[]
      */
-    public function getItems(): Items
+    public function getItems(): array
     {
         return $this->Items;
     }
@@ -99,7 +99,7 @@ class DatosTransaccion
      */
     public function setItems(Items $Items): DatosTransaccion
     {
-        $this->Items = $Items;
+        $this->Items[] = $Items;
         return $this;
     }
 

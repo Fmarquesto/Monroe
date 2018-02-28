@@ -35,7 +35,7 @@ $consultaRespuestaPedidoWS = new \App\ConsultaRespuestaPedido\ConsultaRespuestaP
 
 $res = $consultaRespuestaPedidoWS->ConsultaRespuestaPedido($consultaRespuestaPedido);
 var_dump($res);
-
+*/
 $datosTransaccion = new \App\SolicitudPedido\DatosTransaccion();
 
 $producto = new \App\Producto();
@@ -53,8 +53,9 @@ $solicitud->setAutorizacion($auth)->setDatosTransaccion($datosTransaccion);
 
 $solicitudWS =  new \App\SolicitudPedido\SolicitudPedidoWS();
 $res = $solicitudWS->SolicitudPedido($solicitud);
-var_dump($res);*/
+var_dump($res);
 
+/*
 $datosTransaccion = new \App\ConsultaDisponibilidadProducto\DatosTransaccion();
 
 $producto = (new \App\Producto())
@@ -69,7 +70,7 @@ $item = (new \App\ConsultaDisponibilidadProducto\Item())
     ->setCantidad(2);
 $items = (new \App\ConsultaDisponibilidadProducto\Items())->setItem($item);
 $datosTransaccion->setDeposito('bas')->setItems($items);
-/*
+
 $producto2 = (new \App\Producto())
     ->setCodigoBarras('1233')
     ->setItemIdDrogueria('1223')
@@ -82,10 +83,11 @@ $item2 = (new \App\ConsultaDisponibilidadProducto\Item())
     ->setCantidad(11);
 
 $items2 = (new \App\ConsultaDisponibilidadProducto\Items())->setItem($item2);
-$datosTransaccion->setDeposito('bas')->setItems($items2);*/
+$datosTransaccion->setDeposito('bas')->setItems($items2);
 
 $consultaDisponibilidadProducto = (new \App\ConsultaDisponibilidadProducto\ConsultaDisponibilidadProducto())->setAutorizacion($auth)->setDatosTransaccion($datosTransaccion);
 $consultaDisponibilidadProductoWS = new \App\ConsultaDisponibilidadProducto\ConsultaDisponibilidadProductoWS();
 $res = $consultaDisponibilidadProductoWS->ConsultaDisponibilidadProducto($consultaDisponibilidadProducto);
 
 var_dump($res);
+*/
